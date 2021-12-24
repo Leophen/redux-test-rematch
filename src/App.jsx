@@ -1,13 +1,10 @@
 import React from 'react'
 import './index.scss'
-import { useStore } from 'react-redux'
-import { useAppSelector, useAppDispatch } from './store/hooks'
+import { useStore,useSelector,useDispatch } from 'react-redux'
 
 const App = () => {
-  // const count = useSelector((state) => state.counter.count)
-  const count = useAppSelector((state) => state.counter.count)
-  // const dispatch = useDispatch()
-  const dispatch = useAppDispatch()
+  const count = useSelector((state) => state.counter.count)
+  const dispatch = useDispatch()
   const store = useStore()
   console.log(store)
 
