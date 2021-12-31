@@ -7,15 +7,18 @@ const App = () => {
   const dispatch = useDispatch()
 
   const handleAddCount = () => {
-    dispatch({ type: 'ADD_COUNT' })
+    // dispatch({ type: 'ADD_COUNT' })
+    dispatch.counter.addCount()
   }
 
   const handleSubCount = () => {
-    dispatch({ type: 'SUB_COUNT' })
+    // dispatch({ type: 'SUB_COUNT' })
+    dispatch.counter.subCount()
   }
 
   const handleMultiCount = () => {
-    dispatch({ type: 'MULTI_COUNT', payload: count })
+    // dispatch({ type: 'MULTI_COUNT', payload: count })
+    dispatch.counter.multiCount(count)
   }
 
   return (
